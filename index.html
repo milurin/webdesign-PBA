@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1 class="title">CineStar</h1>
+    <title>Demon Slayer: Infinity Castle</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Smooth Scrolling -->
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+
+  <div data-role="page" id="indexPage">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html" data-transition="slide">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="synopsis.html" data-transition="slide">SYNOPSIS</a></li>
+        <li class="nav-item"><a class="nav-link" href="news.html" data-transition="slide">NEWS</a></li>
+        <li class="nav-item"><a class="nav-link" href="show-time.html" data-transition="slide">SHOW TIME</a></li>
+        <li class="nav-item"><a class="nav-link" href="cast.html" data-transition="slide">CAST</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+
+      <!-- Logo -->
+      <div class="logo-container">
+          <img src="images/logoheader.jpg" alt="Demon Slayer Logo" class="logo">
+      </div>
+
+      <!-- Title Header -->
+      <header class="main-header">
+          <h1>Demon Slayer: Infinity Castle</h1>
+          <p>A place where only the strong stands</p>
+      </header>
+
+      <!-- Trailer Video -->
+      <section>
+        <div class="video-container">
+            <video id="promo-video" width="96%" autoplay loop muted controls>
+                <source src="videos/trailerdemon.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Official Website Button -->
+        <div class="text-center my-4">
+            <a href="https://demonslayer-anime.com/" class="custom-btn" target="_blank">Official Website</a>
+        </div>
+
+        <!-- Contact Us Button -->
+        <div class="text-center my-4">
+          <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#contactModal">
+              Contact Us
+          </button>
+        </div>
+
+        <!-- Contact Us Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content contact-form bg-dark text-white">
+              <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="contactForm">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                    <small class="text-danger" id="nameError"></small>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    <small class="text-danger" id="emailError"></small>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" class="form-control" rows="3" placeholder="Type your message here" required></textarea>
+                    <small class="text-danger" id="messageError"></small>
+                  </div>
+
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="consentCheck" required>
+                    <label class="form-check-label" for="consentCheck">
+                      I consent to the use of my data for communication purposes.
+                    </label>
+                    <small class="text-danger d-block" id="consentError"></small>
+                  </div>
+
+                  <button type="submit" class="btn btn-danger w-100">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </section>
+    </div>
+
+    <!-- Movie Info Section -->
+    <section class="movie-info-section container my-5">
+    <div class="row align-items-center">
+
+    <!-- Left: Movie Carousel -->
+    <div class="col-md-6">
+      <div id="movieCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-4 border border-darkred">
+          <div class="carousel-item active">
+            <img src="images/movie1.webp" class="d-block w-100" alt="Poster 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/movie2.webp" class="d-block w-100" alt="Poster 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/movie3.webp" class="d-block w-100" alt="Poster 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right: Movie Details -->
+    <div class="col-md-6">
+      <div class="movie-details p-4 rounded-4">
+        <h2>MOVIE DETAILS</h2>
+        <p><strong>Release Date:</strong> July 18 2025</p>
+        <p><strong>Director By:</strong> Haruo Sotozaki</p>
+        <p><strong>Written By:</strong> Koyoharu Gotouge</p>
+        <p><strong>Genre:</strong> Anime, Action, Fantasy, Adventure</p>
+        <p><strong>Runtime:</strong> 2 hours, 35 minutes</p>
+        <p><strong>Box Office:</strong> $682 million worldwide</p>
+        <p><strong>Production Team:</strong> Ufotable</p>
+        <p><strong>Language:</strong> Japanese</p>
+        <p><strong>Available Subtitles:</strong> English, Spanish, French, Japanese, Malay, Indonesian</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Demon Slayer: Infinity Castle</p>
+    </footer>
+
+  </div>
+
+  <!-- Contact Form JS -->
+  <script>
+    $(document).ready(function () {
+      $("#contactForm").submit(function (e) {
+        e.preventDefault();
+        let valid = true;
+
+        $("#nameError, #emailError, #messageError, #consentError").text("");
+
+        const name = $("#name").val().trim();
+        const email = $("#email").val().trim();
+        const message = $("#message").val().trim();
+        const consent = $("#consentCheck").is(":checked");
+
+        if (!name) { $("#nameError").text("Please enter your name."); valid = false; }
+        if (!email) { $("#emailError").text("Please enter your email."); valid = false; }
+        else if (!/\S+@\S+\.\S+/.test(email)) { $("#emailError").text("Please enter a valid email address."); valid = false; }
+        if (!message) { $("#messageError").text("Please type a message."); valid = false; }
+        if (!consent) { $("#consentError").text("You must agree to the consent checkbox."); valid = false; }
+
+        if (valid) {
+          alert(`Thank you, ${name}! Your message has been sent successfully.`);
+          $("#contactForm")[0].reset();
+          $("#contactModal").modal('hide');
+        }
+      });
+    });
+  </script>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    window.addEventListener('load', () => {
+        document.body.classList.add('loaded');
+    });
+  </script>
+
+</body>
+</html>
